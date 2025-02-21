@@ -29,4 +29,9 @@ public class HttpMethod {
     public Boolean fn4(@RequestBody User user){
         return users.add(user);
     }
+    @PutMapping("/hello/add/data")
+    public User fn5(@RequestBody User user){
+        users.add(0,user);
+        return users.get(0);
+    }
 }
