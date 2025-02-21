@@ -1,10 +1,10 @@
 package com.rest.apis;
 
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import com.fasterxml.jackson.databind.JsonNode;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
 
 @RestController
 public class HttpMethod {
@@ -19,5 +19,14 @@ public class HttpMethod {
     @GetMapping("hello/param/{name}")
     public String fn3(@PathVariable String name){
         return "hello:) "+name+" {muishi? ,muishi!}";
+    }
+    ArrayList<User> users = new ArrayList<>();
+    @PostMapping("/hello/add/data")
+//    The @RequestBody annotation in Spring Boot is used to bind
+//    the body of an HTTP request to a method parameter
+//    in a controller handler method. When you annotate a method parameter with @RequestBody ,
+//    Spring Boot automatically converts the request body into the specified Java object.
+    public Boolean fn4(@RequestBody User user){
+        return users.add(user);
     }
 }
