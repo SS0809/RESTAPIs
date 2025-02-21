@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "b51e7761-7119-44b4-98f9-fce7734504fc",
+		"name": "RESTAPIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22945486"
+	},
+	"item": [
+		{
+			"name": "UC1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/hello",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UC2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/hello/query?name=Saurabh",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"hello",
+						"query"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Saurabh"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UC3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/hello/param/Saurabh",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"hello",
+						"param",
+						"Saurabh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UC4",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"Saurabh\",\r\n    \"lastName\":\"Saraswat\"   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/hello/add/data",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"hello",
+						"add",
+						"data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UC5",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"Saurabh\",\r\n    \"lastName\":\"Saraswat\"   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/hello/add/data",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"hello",
+						"add",
+						"data"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost/spring",
+			"type": "string"
+		}
+	]
+}
